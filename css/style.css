@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "squidgame";
+  src: url("../fonts/Game\ Of\ Squids.otf");
+  src: url("../fonts/Game\ Of\ Squids.ttf");
+}
+@font-face {
+  font-family: "kumbh";
+  src: url("../fonts/KumbhSans-Regular.ttf");
+}
+@font-face {
+  font-family: "grotesque";
+  src: url("../fonts/ClassicGrotesquePro-Regular.ttf");
+}
+
+:root {
+  --pink: #d43b81;
+  --cyan: #4fd6cc;
+  --orange: #d6504d;
+  --light: rgb(226, 226, 226);
+  --dark: #0d152b;
+  --pale-dark: #0d152bf5;
+  --squidgame: "squidgame";
+  --kumbh: "kumbh";
+  --grotesque: "grotesque";
+}
+* {
+  font-family: var(--grotesque);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--pale-dark);
+}
+nav {
+  z-index: 4;
+  direction: rtl;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.1);
+  background-color: var(--dark);
+}
+main{
+  margin: 8rem 0;
+}
+footer{
+  border-top:2px solid #fff;
+}
+.nav-link:hover {
+  background-color: var(--cyan);
+}
+.logo {
+  font-family: var(--squidgame);
+}
+
+.searchbar button {
+  background-color: #fff;
+  border-radius: 50em;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  -ms-border-radius: 50em;
+  -o-border-radius: 50em;
+}
+.searchbar input {
+  background-color: var(--light);
+}
+.searchbar input:focus {
+  background-color: var(--light);
+}
+.searchbar input::placeholder {
+  text-align: center;
+}
+.searchbar button:hover {
+  background-color: var(--light);
+}
+.searchbar i {
+  color: var(--orange);
+}
+
+.watch-btn {
+  --glow-color: #cf6b6a;
+  --glow-spread-color:#d6504d;
+  --enhanced-glow-color: #f1706e;
+  --btn-color:#8a3433;
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+/* right: -100px; */
+
+}
+
+.watch-btn::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(2em) rotateX(35deg) scale(1, 0.6);
+  -webkit-transform: perspective(2em) rotateX(35deg) scale(1, 0.6);
+  -moz-transform: perspective(2em) rotateX(35deg) scale(1, 0.6);
+  -ms-transform: perspective(2em) rotateX(35deg) scale(1, 0.6);
+  -o-transform: perspective(2em) rotateX(35deg) scale(1, 0.6);
+}
+
+.watch-btn:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.watch-btn:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
